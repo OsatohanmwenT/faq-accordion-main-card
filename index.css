@@ -1,0 +1,97 @@
+:root{
+--White: hsl(0, 0%, 100%);
+--Light-pink: hsl(275, 100%, 97%);
+--Grayish-purple: hsl(292, 16%, 49%);
+--Dark-purple: hsl(292, 42%, 14%);
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+    background-color: var(--Light-pink);
+    background: url(assets/images/background-pattern-desktop.svg) no-repeat center top var(--Light-pink);
+}
+.wrapper{
+    top: 100px;
+    position: relative;
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: var(--White);
+    display: flex;
+    margin: 50px auto;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+}
+.container .header{
+    display: flex;
+    gap: 20px;
+    color: var(--Dark-purple);
+}
+.container .content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--Dark-purple);
+}
+.container .container .accordion{
+    padding: 15px auto;
+    display: flex;
+    flex-direction: column;
+}
+.container .content .accordion:nth-child(2)::before{
+    content: "";
+    display: flex;
+    background-color: var(--Light-pink);
+    height: 1px;
+    width: 100%;
+}
+.container .content .accordion:nth-child(3)::before{
+    content: "";
+    display: flex;
+    background-color: var(--Light-pink);
+    height: 1px;
+    width: 100%;
+}
+.container .content .accordion:nth-child(4)::before{
+    content: "";
+    display: flex;
+    background-color: var(--Light-pink);
+    height: 1px;
+    width: 100%;
+}
+.container .content .accordion-header{
+    display: flex;
+    margin: 10px auto;
+    font-size: 0.9rem;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    cursor: pointer;
+}
+.container .content .accordion-header img{
+    cursor: pointer;
+}
+.container .content .accordion .accordion-answer{
+    color: var(--Grayish-purple);
+    font-weight: 400;
+    font-size: 0.75rem;
+    max-height: 300px;
+    overflow: hidden;
+    display: none;
+}
+.container .content .accordion.active .accordion-answer{ 
+    max-height: 300px;
+}
